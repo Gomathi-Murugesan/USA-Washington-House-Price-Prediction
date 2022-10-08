@@ -1,2 +1,2 @@
-# USA-Washington-House-Price-Prediction
+# USA-Washington-House-Price-Predictor
 
