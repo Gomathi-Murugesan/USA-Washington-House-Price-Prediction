@@ -1,0 +1,83 @@
+
+
+.card-title {
+  letter-spacing: 1.1px;
+}
+
+.area {
+  font-family: MerriweatherRegular;
+  font-size: 25px;
+  line-height: initial;
+  color: black;
+  text-align: left;
+}
+
+.bed{
+  font-family: MerriweatherRegular;
+  font-size: 25px;
+  line-height: initial;
+  color: black;
+  text-align: left;
+  width: 25%;
+}
+
+.location{
+  font-family: MerriweatherRegular;
+  font-size: 25px;
+  line-height: initial;
+  color: black;
+  text-align: left;
+  width: 50%;
+}
+
+.submit{
+  background: #16f68d;
+  width: 76%;
+  border: 0;
+  line-height: initial;
+  margin: 25px 0 10px;
+  box-sizing: border-box;
+  font-size: 25px;
+	height: 35px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.result{
+		background: #dca91c;
+		width: 76%;
+		border: 0;
+		margin: 25px 0 10px;
+		box-sizing: border-box;
+		font-size: 25px;
+		height: 35px;
+		text-align: center;
+}
+
+.form {
+
+	font-family: MerriweatherRegular;
+	font-weight: normal;
+	line-height: 1.625;
+	margin: 8px auto;
+	padding-left: 16px;
+	z-index: 2;
+}
+
+.img {
+  background: url("./images/house.jpg");
+	background-repeat: no-repeat;
+  background-size: auto;
+  background-size:100% 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(15px);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
