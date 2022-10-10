@@ -8,7 +8,7 @@ function onClickedEstimatePrice() {
     var year_built = document.getElementById('uiyear');
     var estimate_price = document.getElementById('uiEstimatedPrice');
 
-    var url = "http://127.0.0.1:5000/predict_house_price";
+    var url = "/app1/predict_house_price";
 
     $.post(url, {
         sqft_living : parseFloat(total_sqft.value),
@@ -25,7 +25,7 @@ function onClickedEstimatePrice() {
 
 function onloadCity() {
     console.log("document loaded");
-    var url = "http://127.0.0.1:5000/get_cities_name";
+    var url = "/app1/get_cities_name";
     $.get(url, function(data, status) {
         console.log("got response for get_cities_name request");
         if (data) {

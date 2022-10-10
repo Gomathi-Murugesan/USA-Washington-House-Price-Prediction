@@ -6,7 +6,9 @@ __cities = None
 __data_columns = None
 __model = None
 
+
 def get_cities_name():
+    load_artifacts()
     return __cities
 
 def get_estimated_house_price(city, sqft_living, bathrooms, bedrooms, yr_built):
@@ -35,13 +37,13 @@ def load_artifacts():
     global __data_columns
     global __model
 
-    with open('./artifacts/input_columns.json', 'r') as f:
+    with open('./api/artifacts/input_columns.json', 'r') as f:
         __data_columns = json.load(f)['data_columns']
 
-    with open('./artifacts/city_names.json', 'r') as f:
+    with open('./api/artifacts/city_names.json', 'r') as f:
         __cities = json.load(f)['city_names']
 
-    with open('./artifacts/usa_house_price_model.pickle', 'rb') as f:
+    with open('./api/artifacts/usa_house_price_model.pickle', 'rb') as f:
         __model = pickle.load(f)
 
     print('Load Artifacts Done')

@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify, render_template
-import util
+from api import util
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-@app.route('/get_cities_name')
+@app.route('/app1/get_cities_name')
 def get_cities_name():
     response = jsonify({
         'cities': util.get_cities_name()
@@ -18,7 +18,7 @@ def get_cities_name():
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
 
-@app.route('/predict_house_price', methods=['POST'])
+@app.route('/app1/predict_house_price', methods=['POST'])
 def predict_house_price():
     sqft_living = float(request.form['sqft_living'])
     city = request.form['city']
@@ -36,4 +36,5 @@ def predict_house_price():
 if __name__ == '__main__':
     print('Starting our server')
     util.load_artifacts()
-    app.run()
+    app.run(host='0.0.0.0')
+
