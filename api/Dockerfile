@@ -11,4 +11,5 @@ WORKDIR /
 
 EXPOSE $PORT
 
-CMD ["gunicorn", "-w", "3", "-b", --port $PORT, "-t", "360", "--reload", "api.wsgi:app"]
+#CMD ["gunicorn", "-w", "3", "-b", --port $PORT, "-t", "360", "--reload", "api.wsgi:app"]
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT api.wsgi:app
