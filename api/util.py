@@ -12,6 +12,7 @@ def get_cities_name():
     return __cities
 
 def get_estimated_house_price(city, sqft_living, bathrooms, bedrooms, yr_built):
+    load_artifacts()
     try:
         city_index = __data_columns.index(city.lower())
     except:
