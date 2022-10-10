@@ -9,6 +9,6 @@ RUN pip install -r requirements.txt
 COPY . /api
 WORKDIR /
 
-EXPOSE $port
+EXPOSE $PORT
 
 CMD ["gunicorn", "-w", "3", "-b", --port $PORT, "-t", "360", "--reload", "api.wsgi:app"]
