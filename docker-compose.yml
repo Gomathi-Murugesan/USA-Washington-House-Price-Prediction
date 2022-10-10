@@ -3,6 +3,7 @@ version: '3'
 services:
 
   api:
+    image: api
     container_name: flask_api
     restart: always
     build: ./api
@@ -15,6 +16,7 @@ services:
       - "5000:5000"
 
   nginx:
+    image: nginx
     container_name: nginx
     restart: always
     build: ./nginx
